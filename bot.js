@@ -9,7 +9,7 @@ let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
 
 // Snow Bot By: Zy4d.js#0149
 client.on('ready', () => {
-    client.user.setGame(`Maintance`, 'https://twitch.tv/Snow-Bot');
+    client.user.setGame(`.help | News: Credit`, 'https://twitch.tv/Snow-Bot');
     console.log('Always Ready To Help!');
 });
 	client.on('message', message => {//Servers
@@ -114,6 +114,9 @@ __**Member Commands**__
 ❖**.about** - يضهرلك معلومات السيرفر
 ❖**.new** - انشاء تذكرة
 ❖**.close** - اغلاق التذكرة
+❖**.credit** - معرفة عدد الكريدت الخاص بك
+❖**.daily** - الحصول على عدد معين من الكريدت كل 6 ساعات
+❖**.trans** - ارسال عدد من الكريدت الى اي شخص انت تحدده
 
 __**Admin Commands**__
 ❖**.bc** -  (امر البرود كاست (ارسال رسالة لجميع اعضاء السيرفر 
