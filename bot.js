@@ -142,7 +142,7 @@ __**Admin Commands**__
 
      
 });
-var prefix = ".";
+var Prefix = ".";
 client.on('message', message => {//about
     if(message.content == prefix + 'about') {
 		var servername = message.guild.name
@@ -338,12 +338,6 @@ mentionned.send(`:credit_card: | Transfer Receipt \`\`\`\`You have received ${ar
         })
 }
 });
-	  
-client.on('message', msg => {//Invite
-    if (msg.content === 'Hi') {
-        msg.reply('Hi');
-    }
-});
 client.on('message', message => {//ID
      if (message.content === ".id") {
      let embed = new Discord.RichEmbed()
@@ -358,4 +352,5 @@ client.on('message', message => {//ID
   message.channel.sendEmbed(embed);
     }
 });
+
 client.login(process.env.BOT_TOKEN);
