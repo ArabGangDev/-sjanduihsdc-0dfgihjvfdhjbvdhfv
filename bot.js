@@ -2,7 +2,7 @@
 const client = new Discord.Client();
 // Snow Bot By: Zy4d.js#0149
 client.on('ready', () => {
-    client.user.setGame(`.help | Servers : ${client.guilds.size}	`, 'https://twitch.tv/Snow-Bot');
+    client.user.setGame(`Maintance | صيانة`, 'https://twitch.tv/Snow-Bot');
     console.log('Always Ready To Help!');
 });
 	client.on('message', message => {//Servers
