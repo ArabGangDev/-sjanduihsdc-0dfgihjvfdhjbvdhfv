@@ -2,7 +2,7 @@
 const client = new Discord.Client();
 // Snow Bot By: Zy4d.js#0149
 client.on('ready', () => {
-    client.user.setGame(`Maintance | صيانة`, 'https://twitch.tv/Snow-Bot');
+    client.user.setGame(`.help | News: Ticket`, 'https://twitch.tv/Snow-Bot');
     console.log('Always Ready To Help!');
 });
 	client.on('message', message => {//Servers
@@ -105,6 +105,9 @@ __**Member Commands**__
 ❖**.servers** - Snow Bot يضهرلك عدد السيرفرات التي اضافت 
 ❖**.id** - يضهرلك معلومات حسابك
 ❖**.about** - يضهرلك معلومات السيرفر
+:fire: New :fire: 
+❖**.new** - انشاء تذكرة
+❖**.close** - اغلاق التذكرة
 
 __**Admin Commands**__
 ❖**.bc** -  (امر البرود كاست (ارسال رسالة لجميع اعضاء السيرفر 
