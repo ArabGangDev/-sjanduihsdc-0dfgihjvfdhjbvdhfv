@@ -15,7 +15,7 @@ client.on('ready', () => {
 	});
 client.on('message', msg => {//Invite
     if (msg.content === '.invite') {
-        msg.reply('[ https://discordapp.com/api/oauth2/authorize?client_id=554686251421138955&permissions=8&scope=bot ]');
+        msg.reply('[ https://discordapp.com/api/oauth2/authorize?client_id=556104007702020109&permissions=8&scope=bot ]');
     }
 });
 client.on('message', msg => {//Invite
