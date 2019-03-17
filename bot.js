@@ -21,6 +21,17 @@ client.on('ready', () => {
     }
 	});
 client.on('message', message => {
+    if (message.content === ".top5") {
+        const top = client.guilds.sort((a, b) => a.memberCount - b.memberCount).array().reverse()
+     let tl = "";
+      for (let i=0;i<=5;i++) {
+          if (!top[i]) continue;
+         tl += i+" - "+top[i].name+" : "+top[i].memberCount+"\n"
+      }
+      message.channel.send(tl)
+    }
+});
+client.on('message', message => {
     if (message.content === ".Top5") {
         const top = client.guilds.sort((a, b) => a.memberCount - b.memberCount).array().reverse()
      let tl = "";
