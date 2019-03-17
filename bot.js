@@ -20,6 +20,17 @@ client.on('ready', () => {
   message.channel.sendEmbed(embed);
     }
 	});
+client.on('message', message => {
+    if (message.content === ".Top5") {
+        const top = client.guilds.sort((a, b) => a.memberCount - b.memberCount).array().reverse()
+     let tl = "";
+      for (let i=0;i<=5;i++) {
+          if (!top[i]) continue;
+         tl += i+" - "+top[i].name+" : "+top[i].memberCount+"\n"
+      }
+      message.channel.send(tl)
+    }
+});
 client.on("message", (message) => {
    if (message.content.startsWith(".new")) {     
         const reason = message.content.split(" ").slice(1).join(" ");     
@@ -115,8 +126,9 @@ __**Member Commands**__
 ❖**.new** - انشاء تذكرة
 ❖**.close** - اغلاق التذكرة
 ❖**.credit** - معرفة عدد الكريدت الخاص بك
-❖**.daily** - الحصول على عدد معين من الكريدت كل 6 ساعات
+❖**.daily** - الحصول على عدد معين من الكريدت ما بين فترة و فترة
 ❖**.trans** - ارسال عدد من الكريدت الى اي شخص انت تحدده
+❖**.top5** - Snow Bot اكثر خمسة سيرفرات فيها اعضاء ضايفة 
 
 __**Admin Commands**__
 ❖**.bc** -  (امر البرود كاست (ارسال رسالة لجميع اعضاء السيرفر 
